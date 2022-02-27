@@ -10,7 +10,9 @@ export const StyledTable = styled.table`
   table-layout: auto;
 `;
 
-export const StyledThead = styled.thead``;
+export const StyledThead = styled.thead`
+  
+`;
 
 export const StyledTbody = styled.tbody``;
 

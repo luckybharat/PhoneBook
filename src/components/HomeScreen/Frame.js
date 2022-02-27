@@ -35,6 +35,11 @@ const getDate = () => {
   let day = date.getDate();
   if (month < 10) month = "0" + month;
   if (day < 10) day = "0" + day;
+  console.log(date.toLocaleDateString([], {
+    day: "2-digit",
+    minute: "2-digit",
+    year: "numeric",
+  }))
   return `${date.getFullYear()}-${month}-${day}`;
 };
 
@@ -236,7 +241,7 @@ export default function HomeScreen() {
           <TableWrapper>
             {Object.keys(recordData.data).length > 0 ? (
               <StyledTable>
-                <StyledThead>
+                <StyledThead className="bg-indigo-400">
                   <StyledThTr>
                     <StyledTh>#</StyledTh>
                     <StyledTh>
